@@ -1,0 +1,18 @@
+name: 01-trigger-azure-cast-scan-pipeline
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  CastScanning:
+     runs-on: self-hosted
+     steps:
+        - name: Azure pipelines actions
+          uses: Azure/pipelines@v1
+          with: 
+           azure-devops-project-url: 'https://dev.azure.com/rvmado/NVS_EH'
+           azure-pipeline-name: 'Application03'
+           azure-devops-token: '${{ secrets.AZURE_DEVOPS_TOKEN }}'

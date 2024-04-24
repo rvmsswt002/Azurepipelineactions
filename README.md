@@ -1,4 +1,4 @@
-# GitHub Action to trigger a run in Azure pipelines#FGFF
+# GitHub Action to trigger a run in Azure pipelines#
 
 GitHub Actions makes it easy to build, test, and deploy your code right from GitHub. 
 
